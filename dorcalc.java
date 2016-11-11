@@ -17,8 +17,8 @@ public class dorcalc {
     double result;
     String beginning;
     
-    if (System.getProperty("os.name")=="Linux"){
-            System.out.print("\u001B[1m DorCalc");
+    if (System.getProperty("os.name").equals("Linux")){
+            System.out.print("\033[0;1m DorCalc\033[0m");
         } else {
             System.out.print("DorCalc");
         }
@@ -111,8 +111,8 @@ public class dorcalc {
     
     public static void letOutput (double result)
     {
-        if (System.getProperty("os.name")=="Linux"){
-            System.out.println("\u001B[1m"+result);
+        if (System.getProperty("os.name").equals("Linux")){
+            System.out.println("\033[0;1m"+result+"\033[0m");
         } else {
             System.out.println(result);
         }
